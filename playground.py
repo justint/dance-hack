@@ -1,12 +1,13 @@
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 import spotipy.util as util
+from time import sleep
 import json
 import time
 import sys
 import os
 
-from time import sleep
+
 
 CLIENT_ID 		= # insert your client id here
 CLIENT_SECRET 	= # insert your client secret here
@@ -90,14 +91,10 @@ def calculate_std():
 	x_left_std = float(sys.argv[3])
 	y_left_std = float(sys.argv[4])
 
-	data = [[x_right_std, y_right_std],[x_left_std, y_left_std]]
-
 	avg_std_right = (x_right_std + y_right_std) / 2.0
 	avg_std_left = (x_left_std + y_left_std) / 2.0
 
 	avg_std = (avg_std_right + avg_std_left) / 2.0
-
-
 
 	max_std = max([x_right_std, x_left_std, y_right_std, y_left_std])
 
@@ -106,5 +103,6 @@ def calculate_std():
 
 	return max_std
 
-
+# arguement "volume" -> virtual DJ will adjust volume
+# arguement "song" -> virtual DJ will change tracks
 run("volume", normalize_std(calculate_std()))
