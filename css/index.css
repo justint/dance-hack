@@ -42,6 +42,7 @@ body {
 
 h2 {
   color: rgb(255,209,253);
+  text-shadow: 1px 1px 3px #000000;
 }
 
 /* Button CSS */
