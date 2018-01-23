@@ -1,3 +1,12 @@
+/* for fade it */
+#logo, .github-button, #title, p {
+    opacity: 0;
+}
+
+.long-text {
+    text-align: center;
+}
+
 .container {
   margin: auto;
   text-align: center;
@@ -23,6 +32,10 @@ a.btn.btn-default {
 .body {
   width: 90%;
   margin: auto;
+}
+
+h2 {
+    margin-top: 60;
 }
 
 
