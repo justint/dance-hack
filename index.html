@@ -57,7 +57,7 @@
       <source src="video/20180121_040619.mp4" type="video/mp4">
       The video could not load :(
     </video>
-    <p class="paragraph">One of the many tests performed on our system. In this instance, Travis is testing how the movement of the arms is controlling the volume of the music.</p>
+    <p class="paragraph">One of the many tests performed on our system. In this instance, Travis is testing how the movement of his arms is controlling the volume of the music.</p>
     <h2>How it works</h2>
     <h3>Step 1: Detecting people and "dancing"</h3>
     <p class="paragraph description">Dance Hack runs a multi-threaded <a href="https://github.com/CMU-Perceptual-Computing-Lab/openpose" target="_blank">OpenPose</a> application, in which one thread handles the webcam & pose estimation calculations. We then run a concurrent worker thread which asynchonously queries for processed frames, acquiring the image data & body pose estimation data, and display the visuals to the GUI. In that same worker thread, we also calculate our level of "dancing":</p>
