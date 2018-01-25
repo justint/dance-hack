@@ -1,10 +1,17 @@
 /* for fade it */
-#logo, .github-button, #title, p {
+#logo, .github-button, .b_seemore, #title, p {
     opacity: 0;
 }
 
 .long-text {
     text-align: center;
+    margin: auto;
+}
+
+video {
+    width: 600px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .container {
@@ -21,7 +28,31 @@
 }
 
 .github-button {
+  width: 300px;
+  margin: auto;
+}
 
+.seemore-button {
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.media {
+  opacity: 0;
+  margin: auto;
+  text-align: center;
+}
+
+a {
+  transition: 1s;
+  color: #ee9cff;
+  text-decoration: none;
+}
+
+a:hover {
+  transition: 1s;
+  color: #ffa9bd;
+  text-decoration: underline;
 }
 
 a.btn.btn-default {
@@ -34,27 +65,28 @@ a.btn.btn-default {
   margin: auto;
 }
 
-h2 {
-    margin-top: 60;
-}
-
-
 p {
   color: #fff;
+  text-shadow: 2px 1px 2px #000000;
+  line-height: 2;
+  width: 600px;
+  margin: auto;
 }
 
 body {
+  background-color: #000;
   background-image: url("../background.jpg");
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   background-position-x: center;
   background-position-y: top;
-  background-size: 100%;
+  background-size: auto 100%;
   font-family: Arial;
 }
 
 h2 {
-  color: rgb(255,209,253);
+  color: rgb(177, 243, 194);
+  margin-top: 40px;
   text-shadow: 1px 1px 3px #000000;
 }
 
@@ -82,6 +114,20 @@ h2 {
 
 .button_base:hover {
     cursor: pointer;
+}
+
+.b_seemore div {
+    color: rgb(201,176,201);
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    transition: 1s;
+}
+
+.b_seemore:hover div {
+    color: #ffffff;
+    transition: 1s;
 }
 
 .b10_tveffect div {
@@ -288,5 +334,18 @@ h2 {
     75% {
         opacity: 1;
         transform: scale(1.3, 2) translate(-30px, -3px) skewX(20deg);
+    }
+}
+
+
+@media screen and (orientation:portrait) {
+    body {
+      background-size: auto 100%;
+    }
+}
+
+@media screen and (orientation:landscape) {
+    body {
+      background-size: 100% auto;
     }
 }

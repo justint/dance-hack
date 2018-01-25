@@ -3,7 +3,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/index.css">
-  
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="script.js" type="text/javascript"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112910619-1"></script>
@@ -14,7 +14,7 @@
     gtag('config', 'UA-112910619-1');
   </script>
   <title>Dance Hack</title>
-  
+
 </head>
 <body>
   <div class="container">
@@ -34,12 +34,30 @@
           </div>
         </a>
       </div>
-      
+
     </div>
   </div>
   <div class="long-text">
-    <h2 id="title">What is Dance Hack?</h2>
-    <p class="paragraph">A cool project. This webpage is a work in progress. Please check our GitHub!</p>
+    <h2 id="title">A smart DJ that plays music to the crowd.</h2>
+    <p class="paragraph">Developed during SB Hacks 2018 by <a href="http://justintennant.me/" target="_blank">Justin Tennant</a> and <a href="https://travis-cramer.github.io/" target="_blank">Travis Cramer</a>, Dance Hack utilizes the OpenPose computer vision library for estimating human body poses. We calculate how many people in view of the webcam are dancing, and make appropriate API calls to Spotify to change the song or volume.</p>
+      <div class="seemore-button">
+        <div class="button_base b_seemore" id="b_seemore" onclick="show_more()">
+          <div>▾ See more ▾</div>
+        </div>
+      </div>
+  </div>
+  <div class="media">
+    &nbsp;
+    <video controls loop>
+      <source src="video/video-1516685145.mp4" type="video/mp4">
+      The video could not load :(
+    </video>
+    <p class="paragraph">A demonstration of the body pose estimation running in real time.</p>
+    <video controls loop>
+      <source src="video/20180121_040619.mp4" type="video/mp4">
+      The video could not load :(
+    </video>
+    <p class="paragraph">One of the many tests performed on our system. In this instance, Travis is testing how the movement of the arms is controlling the volume of the music.</p>
   </div>
 </body>
 </html>
