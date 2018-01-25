@@ -58,6 +58,15 @@
       The video could not load :(
     </video>
     <p class="paragraph">One of the many tests performed on our system. In this instance, Travis is testing how the movement of the arms is controlling the volume of the music.</p>
+    <h2>How it works</h2>
+    <h3>Step 1: Detecting people and "dancing"</h3>
+    <p class="paragraph description">Dance Hack runs a multi-threaded <a href="https://github.com/CMU-Perceptual-Computing-Lab/openpose" target="_blank">OpenPose</a> application, in which one thread handles the webcam & pose estimation calculations. We then run a concurrent worker thread which asynchonously queries for processed frames, acquiring the image data & body pose estimation data, and display the visuals to the GUI. In that same worker thread, we also calculate our level of "dancing":</p>
+    <p class="paragraph description">For a given body in a scene, we store the person's two-dimensional coordinates of their hands (we figured tracking the arms was the simplest and most efficient way to determine if someone was "dancing") relative to the webcam frame's dimensions, in a queue which stores ten frames at a time. After each passage of ten frames, we calculate the standard deviation of each hand's vertical and horizonal movement over those past ten frames, and classify that final deviation as "dancing" or "not dancing". Depending on either result, we adjust the volume or song, as described below:</p>
+    <p class="paragraph description note">NOTE: At the time of Dance Hack's initial development (and of this webpage, January 2018), OpenPose does not support body 'tracking'; that is, tracking specific individual bodies in a given scene over time. Therefore, in our "level of dancing" calculations, we only calculated based on the first person we found in the scene, usually whoever was nearest to the top-left corner of the frame.</p>
+    <h3>Step 2: Controlling Spotify</h3>
+    <p class="paragraph note">To be filled out :)</p>
+    <br>
+    <p class="paragraph footer">Developed by <a href="http://justintennant.me/" target="_blank">Justin Tennant</a> & <a href="https://travis-cramer.github.io/" target="_blank">Travis Cramer</a> - <a href="https://github.com/justint/dance-hack" target="_blank">view on GitHub</a></p>
   </div>
 </body>
 </html>

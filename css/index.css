@@ -43,6 +43,15 @@ video {
   text-align: center;
 }
 
+.description {
+  text-indent: 2em;
+  text-align: justify;
+}
+
+.note {
+  font-size: 10px;
+}
+
 a {
   transition: 1s;
   color: #ee9cff;
@@ -84,10 +93,17 @@ body {
   font-family: Arial;
 }
 
+h1, h2, h3, h4 {
+  text-shadow: 1px 1px 3px #000000;
+}
+
 h2 {
   color: rgb(177, 243, 194);
   margin-top: 40px;
-  text-shadow: 1px 1px 3px #000000;
+}
+
+h3 {
+  color: rgb(247, 105, 155);
 }
 
 /* Button CSS */
