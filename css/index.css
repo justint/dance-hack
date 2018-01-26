@@ -356,6 +356,7 @@ h3 {
 
 @media screen and (orientation:portrait), screen and (max-width: 700px) {
     body {
+        background-color: #000;
         background: url("../background.jpg") no-repeat center top fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
