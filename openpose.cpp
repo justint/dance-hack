@@ -1,3 +1,6 @@
+// This file is heavily based on OpenPose's Asynchronous Output example: 
+// https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/examples/tutorial_wrapper/1_user_asynchronous_output.cpp
+
 // C++ std library dependencies
 #include <chrono> // `std::chrono::` functions and classes, e.g. std::chrono::milliseconds
 #include <thread> // std::this_thread
